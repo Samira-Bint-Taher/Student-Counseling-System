@@ -1,0 +1,299 @@
+<html>
+<head>
+    <title>Add Student</title>
+    <link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{url_for('static', filename = 'student.png')}}">
+
+</head>
+
+<body>
+
+{% block body %}
+
+<div class="container">
+    <div class="well text-center">
+    <h1>Student Information</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col md-12">
+
+                <h2>Student List
+                    <button type="button" class="btn btn-success pull-right" data-toggle="model" data-target="#mymodal">
+                        Add Student Data
+                    </button>
+                </h2>
+
+                {%with messages =get_flashed_messages()%}
+
+                {%if messages%}
+
+                {%for message in messages%}
+
+                <div class="alert alert-success alert-dismissaables" role="alert">
+
+                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+
+                        <span aria-hidden="true"></span>
+
+                    </button>
+
+                    {{message}}
+
+
+            </div>
+
+                {%endfor%}
+                {%endif%}
+                {%endwith%}
+
+
+
+                <table class="table table-striped">
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>University Email</th>
+                        <th>Phone</th>
+                        <th>Counselling Topic</th>
+                        <th>Action</th>
+
+                    </tr>
+
+
+                    {%for row in student%}
+
+                    <tr>
+                        <td>{{row.0}}</td>
+                        <td>{{row.1}}</td>
+                        <td>{{row.2}}</td>
+                        <td>{{row.3}}</td>
+                        <td>{{row.4}}</td>
+
+                        <td>
+                            <a href="" class="btn btn-warning btn-xs" data-toggle="modal"
+                               data-target="#modaledit{{row.0}}">Edit</a>
+                            <a href="" class="btn btn-danger btn-xs"
+                               onclick="return confirm('Are you sure to Delete?')">Delete</a>
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+
+
+                </table>
+
+            </div>
+
+            </div>
+
+        <div id="modaledit" class="modal fade" role="dialog">
+
+
+   <div class="modal-dialog">
+
+
+      <div class="modal-content">
+
+
+         <div class="modal-header">
+
+
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+
+            <h4 class="modal-title">Please Update Data</h4>
+
+
+         </div>
+
+
+         <div class="modal-body">
+
+
+            <form action="" method="POST">
+
+
+               <div class="form-group">
+
+
+                  <label>Name:</label>
+                  <input type="text" class="form-control" name="name" value="Henry">
+
+
+               </div>
+
+
+                <div class="form-group">
+
+
+                  <label>University Email:</label>
+                  <input type="text" class="form-control" name="email" value="p193henry@gmail.com">
+
+
+               </div>
+
+
+                <div class="form-group">
+
+
+                  <label>Phone:</label>
+                  <input type="text" class="form-control" name="phone" value="01798065478">
+
+
+               </div>
+
+                 <div class="form-group">
+
+
+                  <label>Counselling Topic:</label>
+                  <input type="text" class="form-control" name="counselling topic" value="Career guideline">
+
+
+               </div>
+
+
+
+               <div class="form-group">
+
+
+                  <button class="btn btn-primary" type="submit">Insert Data</button>
+
+
+               </div>
+
+
+            </form>
+
+
+         </div>
+
+
+         <div class="modal-footer">
+
+
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+
+         </div>
+
+
+      </div>
+
+
+   </div>
+
+
+</div>
+
+
+
+<!-- Modal -->
+
+
+<div id="mymodal" class="modal fade" role="dialog">
+
+
+   <div class="modal-dialog">
+
+
+      <div class="modal-content">
+
+
+         <div class="modal-header">
+
+
+
+            <h4 class="modal-title">Add Student Data</h4>
+
+
+         </div>
+
+
+         <div class="modal-body">
+
+             <form action="{ {url_for('insert'))}" method="POST">
+
+                 <div class="form-group">
+                     <label>Name</label>
+                     <input type="text" class="form-control" name="name" required="1">
+
+                 </div>
+
+
+                <div class="form-group">
+
+
+                  <label>University Email:</label>
+                  <input type="email" class="form-control" name="email" required="1">
+
+
+               </div>
+
+
+                <div class="form-group">
+
+
+                  <label>Phone:</label>
+                  <input type="number" class="form-control" name="phone" required="1">
+
+
+               </div>
+
+                 <div class="form-group">
+
+
+                  <label>Counselling Topic:</label>
+                  <input type="text" class="form-control" name="counsellingtopic" required="1">
+
+
+               </div>
+
+
+
+               <div class="form-group">
+
+
+                  <button class="btn btn-primary" type="submit">Add Student </button>
+
+
+               </div>
+
+            </form>
+
+         </div>
+
+
+
+          <div class="modal-footer">
+
+
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+
+         </div>
+
+
+      </div>
+
+
+   </div>
+
+
+</div>
+
+    </div>
+
+</div>
+{% endblock %}
+
+</body>
+<script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+
+<script type="text/javascript" src="{{url_for('static', filename = 'js/bootstrap.min.js')}}"></script>
+
+ </html>

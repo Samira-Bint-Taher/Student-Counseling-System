@@ -1,0 +1,73 @@
+body{
+background-image:url(https://media.istockphoto.com/vectors/family-talking-with-teacher-vector-id636071094?k=6&m=636071094&s=612x612&w=0&h=26dYISSWkYHudPdjM44nEVDUEsZMJs2F-NtueuDPNdo=);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;
+background-position:center;
+margin:40px;
+padding:0px;
+font-family:Verdana;
+}
+nav{
+width:100%;
+background:none;
+overflow:visible;
+position:fixed;
+top:0px;
+color:#000000;
+
+}
+ul{
+padding:0px;
+margin:0px;
+list-style:none;
+
+}
+li{
+float:left;
+
+}
+
+a{padding:15px;
+width:90px;
+display:block;
+text-decoration:none;
+color:#000000;
+font-size: 20px;
+font-style:italic;
+text-decoration: underline;
+font-weight:bold;
+
+
+
+
+}
+#section5{
+
+
+background:none;
+display:inline-block;
+width:100%;
+color:black;
+font-family: 'Redressed', cursive;
+text-shadow: 2px 2px 5px red;
+text-align:left;
+text-indent: 400px;
+font-size: 35px;
+text-decoration: underline;
+font-style:italic;
+}
+p{
+margin:0px;
+padding:10px;
+font-size: 15px;
+text-align:left;
+color:blue;
+text-shadow: 2px 2px 5px white;
+text-indent: 550px;
+}
+h1{
+
+margin:10px;
+padding:0px;
+}

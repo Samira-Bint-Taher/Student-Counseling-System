@@ -1,0 +1,89 @@
+body{
+background-image:url(https://st4.depositphotos.com/5822914/23572/i/600/depositphotos_235726950-stock-photo-colored-pencils-right-side-line.jpg);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;
+background-position:center;
+margin:40px;
+padding:0px;
+font-family:Verdana;
+}
+nav{
+width:100%;
+background:none;
+overflow:visible;
+
+color:#000000;
+margin-top:-40px;
+}
+ul{
+padding:0px;
+margin:10px;
+list-style:none;
+
+}
+li{
+float:left;
+
+}
+
+a{padding:15px;
+width:90px;
+display:block;
+text-decoration:none;
+color:#000000;
+font-size: 20px;
+font-style:italic;
+text-decoration: underline;
+font-weight:bold;
+
+height:2px;
+
+
+}
+
+
+
+#section1{
+font-style:italic;
+text-decoration: underline;
+text-indent: 400px;
+text-shadow: 2px 2px 5px red;
+height:100px;
+background:none;
+display:inline-block;
+width:100%;
+font-size: 35px;
+color:black;
+font-family: 'Redressed', cursive;
+margin:15px;
+padding:0px;
+margin-bottom: 10px;
+margin-left:10px;
+}
+
+div.q{
+height:150px;
+font-size: 15px;
+font-family: 'Akaya Telivigala', cursive;
+text-align:center;
+width:100%;}
+
+#section2{
+font-style:italic;
+font-size: 20px;
+height:200px;
+background:none;
+display:inline-block;
+text-align:left;
+width:100%;
+color:#000000;
+margin-left:10px;
+
+}
+div.a{
+font-size: 20px;
+line-height: 1.4;
+}
+
+
